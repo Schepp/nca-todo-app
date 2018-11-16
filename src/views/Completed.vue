@@ -1,6 +1,6 @@
 <template>
     <div>
-        <TasksList/>
+        <TasksList v-bind:showCompletedStatus="true"/>
         <FloatingButton/>
     </div>
 </template>

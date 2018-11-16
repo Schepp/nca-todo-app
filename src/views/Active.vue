@@ -1,8 +1,8 @@
 <template>
-    <div>
-        <TasksList/>
-        <FloatingButton/>
-    </div>
+  <div>
+    <TasksList v-bind:showCompletedStatus="false"/>
+    <FloatingButton/>
+  </div>
 </template>
 
 <script>

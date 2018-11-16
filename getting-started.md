@@ -9,4 +9,8 @@
 7. Pick `ESLint + Prettier` and chose `lint on save`
 8. Have your configs placed `In dedicated config files`
 9. Save this as your future defaults if you like
-10. Chose `NPM` as package manager 
+10. Chose `NPM` as package manager
+
+# Running builds with Hot-Reloading
+
+Enter `npm run build`
