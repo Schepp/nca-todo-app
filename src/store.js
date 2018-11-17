@@ -19,15 +19,11 @@ export default new Vuex.Store({
       const index = state.tasks.findIndex(task => task.id === id);
 
       state.tasks[index].completed = !state.tasks[index].completed;
-
-      console.log(state.tasks);
     },
     deleteTask(state, id) {
       const index = state.tasks.findIndex(task => task.id === id);
 
       state.tasks.splice(index, 1);
-
-      console.log(state.tasks);
     }
   },
   actions: {}

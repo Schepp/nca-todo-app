@@ -107,7 +107,6 @@ nav {
     scroll-snap-align: start;
     display: inline-block;
     margin-right: 30px;
-
     opacity: 0.1;
     text-decoration: none;
     &,
