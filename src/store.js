@@ -3,9 +3,10 @@ import Vuex from "vuex";
 
 Vue.use(Vuex);
 
-export default new Vuex.Store({
+const storedTasksJSON = window.localStorage.getItem("tasks");
+const store = new Vuex.Store({
   state: {
-    tasks: []
+    tasks: storedTasksJSON ? JSON.parse(storedTasksJSON) : []
   },
   mutations: {
     addTask(state, title) {
@@ -28,3 +29,12 @@ export default new Vuex.Store({
   },
   actions: {}
 });
+
+store.watch(
+  state => state.tasks,
+  value => {
+    window.localStorage.setItem("tasks", JSON.stringify(value));
+  }
+);
+
+export default store;
