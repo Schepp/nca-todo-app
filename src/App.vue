@@ -93,7 +93,6 @@ img {
     );
   }
 }
-
 nav {
   display: block;
   overflow: scroll;
@@ -101,27 +100,23 @@ nav {
   white-space: nowrap;
   scroll-snap-type: x mandatory;
   -ms-overflow-style: -ms-autohiding-scrollbar;
-
   &::-webkit-scrollbar {
     display: none;
   }
-
   a {
     scroll-snap-align: start;
     display: inline-block;
     margin-right: 30px;
+
     opacity: 0.1;
     text-decoration: none;
-
     &,
     &:visited {
       color: var(--medium-grey-color);
     }
-
     &:last-child {
       margin-right: 0;
     }
-
     &.router-link-exact-active {
       color: var(--medium-brand-color);
       opacity: 0.5;
