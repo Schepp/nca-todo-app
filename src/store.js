@@ -5,30 +5,30 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    tasks: [],
+    tasks: []
   },
   mutations: {
-      addTask (state, title) {
-          state.tasks.push({
-              id: `task_${Math.random() * 1000000}`,
-              title: title,
-              completed: false,
-          });
-      },
-      switchTaskCompleted (state, id) {
-          const index = state.tasks.findIndex(task => task.id === id);
+    addTask(state, title) {
+      state.tasks.push({
+        id: `task_${Math.random() * 1000000}`,
+        title: title,
+        completed: false
+      });
+    },
+    switchTaskCompleted(state, id) {
+      const index = state.tasks.findIndex(task => task.id === id);
 
-          state.tasks[index].completed = !state.tasks[index].completed;
+      state.tasks[index].completed = !state.tasks[index].completed;
 
-          console.log(state.tasks);
-      },
-      deleteTask (state, id) {
-          const index = state.tasks.findIndex(task => task.id === id);
+      console.log(state.tasks);
+    },
+    deleteTask(state, id) {
+      const index = state.tasks.findIndex(task => task.id === id);
 
-          state.tasks.splice(index, 1);
+      state.tasks.splice(index, 1);
 
-          console.log(state.tasks);
-      },
+      console.log(state.tasks);
+    }
   },
   actions: {}
 });
